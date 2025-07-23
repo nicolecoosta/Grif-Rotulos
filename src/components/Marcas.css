@@ -1,0 +1,60 @@
+.marcas {
+  background: #020116;
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.marcas p {
+  margin-bottom: 35px;
+ color: rgba(255, 255, 255, 0.80);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 26px */
+}
+.marcas span{
+color: rgba(255, 255, 255, 0.80);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Inter;
+font-size: 20px;
+font-style: italic;
+font-weight: 600;
+line-height: 130%;
+}
+.marcas-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marcas-track {
+  display: flex;
+  gap: 60px;
+  animation: scroll 35s linear infinite;
+  width: fit-content;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1); /* efeito branco igual ao da Valid */
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
