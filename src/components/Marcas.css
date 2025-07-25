@@ -1,46 +1,44 @@
 .marcas {
+  position: relative;
   background: #020116;
   padding: 50px 0;
   text-align: center;
-  color: #fff;
+  overflow: hidden;
+mask-image: linear-gradient(
+  to right,
+  transparent 0%,
+  #020116 20%,
+  #020116 80%,
+  transparent 95%
+);
+-webkit-mask-image: linear-gradient(
+  to right,
+  transparent 0%,
+  #020116 20%,
+  #020116 80%,
+  transparent 95%
+);
 }
+
 
 .marcas p {
   margin-bottom: 35px;
- color: rgba(255, 255, 255, 0.80);
-font-feature-settings: 'liga' off, 'clig' off;
-font-family: Inter;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 130%; /* 26px */
-}
-.marcas span{
-color: rgba(255, 255, 255, 0.80);
-font-feature-settings: 'liga' off, 'clig' off;
-font-family: Inter;
-font-size: 20px;
-font-style: italic;
-font-weight: 600;
-line-height: 130%;
-}
-.marcas-slider {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+  color: rgba(255, 255, 255, 0.80);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
 }
 
-.marcas-track {
-  display: flex;
-  gap: 60px;
-  animation: scroll 35s linear infinite;
-  width: fit-content;
+.marcas span {
+  font-style: italic;
+  font-weight: 600;
 }
 
 .logo-img {
   height: 40px;
-  width: auto;
-  filter: brightness(0) invert(1); /* efeito branco igual ao da Valid */
+  margin: 0 40px;
+  filter: brightness(0) invert(1);
   opacity: 0.8;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -50,11 +48,14 @@ line-height: 130%;
   opacity: 1;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
+@media (max-width: 768px) {
+  .logo-img {
+    height: 30px;
+    margin: 0 20px;
   }
-  100% {
-    transform: translateX(-50%);
+
+  .marcas p {
+    font-size: 16px;
+    padding: 0 20px;
   }
 }

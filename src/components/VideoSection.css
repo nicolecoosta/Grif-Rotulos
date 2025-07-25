@@ -1,0 +1,11 @@
+.video-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
